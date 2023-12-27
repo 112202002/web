@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loader-wrapper">
+    <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path d="M0 50 Q 25 75, 50 50 T 100 50" stroke="#00dfff" stroke-width="4" fill="none">
+        <animate attributeName="d" dur="2s" repeatCount="indefinite" values="
+          M0 50 Q 25 25, 50 50 T 100 50;
+          M0 50 Q 25 75, 50 50 T 100 50;
+          M0 50 Q 25 25, 50 50 T 100 50;
+        " />
+      </path>
+    </svg>
+    <div class="loading-text">Loading...</div>
+  </div>
+
+  <div class="container" id="content">
+    <h1 class="title">Voice Recognition</h1>
+    <h2 class="subtitle">Aiding Elderlies for Healthcare</h2>
+    <div class="buttons">
+      <button class="button" onclick="displayText('Motivation')">Motivation</button>
+      <button class="button" onclick="displayText('Principles')">Principles</button>
+      <button class="button" onclick="displayText('Applications')">Applications</button>
+      <button class="button" onclick="displayText('Challenges')">Challenges</button>
+      <button class="button" onclick="displayText('Future')">Future</button>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div id="modalContent"></div>
+      <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
