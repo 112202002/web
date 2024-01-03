@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Voice Recognition</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
@@ -23,14 +24,24 @@
   </div>
   <div class="background-images"></div>
   <div class="container" id="content">
-    <h1 class="title">Voice Recognition</h1>
-    <h2 class="subtitle">Aiding Elderlies for Healthcare</h2>
+    <h1 class="title translate" data-english="Voice Recognition" data-chinese="智能語音辨識"></h1>
+  <h2 class="subtitle translate" data-english="Aiding Elderlies for Healthcare" data-chinese="應用於輔助長者的健康照護"></h2>
     <div class="buttons">
-      <button class="button" onclick="displayText('Motivation')">Motivation</button>
-      <button class="button" onclick="displayText('Principles')">Principles</button>
-      <button class="button" onclick="displayText('Applications')">Applications</button>
-      <button class="button" onclick="displayText('Challenges')">Challenges</button>
-      <button class="button" onclick="displayText('Future')">Future</button>
+      <div class="english-buttons">
+        <button class="button" onclick="displayText('Motivation')">Motivation</button>
+        <button class="button" onclick="displayText('Principle')">Principle</button>
+        <button class="button" onclick="displayText('Applications')">Applications</button>
+        <button class="button" onclick="displayText('Challenges')">Challenges</button>
+        <button class="button" onclick="displayText('Future')">Future</button>
+      </div>
+
+      <div class="chinese-buttons" style="display: none;">
+        <button class="button" onclick="displayText('動機')">動機</button>
+        <button class="button" onclick="displayText('原理')">原理</button>
+        <button class="button" onclick="displayText('應用')">應用</button>
+        <button class="button" onclick="displayText('挑戰')">挑戰</button>
+        <button class="button" onclick="displayText('未來')">未來</button>
+      </div>
     </div>
   </div>
 
@@ -38,8 +49,13 @@
     <div class="modal-content">
       <h2 class="modal-title" id="modalTitle"></h2>
       <div id="modalContent"></div>
+      <p class="modal-sources" id="modalSources"><a href="#" id="sourceLink"></p>
       <span class="close" onclick="closeModal()">&times;</span>
     </div>
+  </div>
+
+  <div class="language-toggle">
+   <span class="toggle-btn" onclick="toggleLanguage()">EN</span>
   </div>
 
   <script src="scripts.js"></script>
