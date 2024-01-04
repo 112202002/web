@@ -237,6 +237,10 @@ b {
     bottom: initial;
     left: initial;
   }
+
+  .modal-sources {
+    font-size: 9px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
